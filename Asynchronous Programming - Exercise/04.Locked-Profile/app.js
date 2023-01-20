@@ -11,8 +11,7 @@ function lockedProfile() {
             let profileDiv = document.createElement('div');
             profileDiv.classList.add('profile');
 
-            profileDiv.innerHTML = `
-            <img src="./iconProfile2.png" class="userIcon" />
+            profileDiv.innerHTML = `<img src="./iconProfile2.png" class="userIcon" />
             <label>Lock</label>
             <input type="radio" name="user1Locked" value="lock" checked>
             <label>Unlock</label>
