@@ -69,15 +69,15 @@ async function students() {
                 alert('Wrong input data!');
 
             };
-        //    fetch(url, {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'aplications/json'
-        //     },
-        //     body: JSON.stringify(data)
-        //    })
-        //    .then(resp => resp.json())
-        //    .then()
+           fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'aplications/json'
+            },
+            body: JSON.stringify(data)
+           })
+           .then(resp => resp.json())
+           .then()
         e.currentTarget.querySelector('.inputs').children[0].value = '';
         e.currentTarget.querySelector('.inputs').children[1].value = '';
         e.currentTarget.querySelector('.inputs').children[2].value = '';
