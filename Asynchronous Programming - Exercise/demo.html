@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form" method="post">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Miro">
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+        </div>
+        <div>
+            <input type="submit" id="btn" value="Login">
+        </div>
+
+    </form>
+    <script>
+        //classic way
+        // let btn = document.getElementById('btn');
+        // btn.addEventListener('click', (e)=>{
+        //     e.preventDefault();
+                // let username = document.getElementById('username')
+        //     console.log('username.value');
+        // });
+        // better way
+        let formEl = document.getElementById('form')
+        formEl.addEventListener('submit', (e)=>{
+            e.preventDefault();
+            let formData = new FormData(e.currentTarget)
+            // you take the element by name -> name="username"
+            // let username = formData.get('username');
+            // let password = formData.get('password');
+            // console.log(username);
+            // console.log(password);
+            // hack way :D
+            let { username, password} = Object.fromEntries(formData);
+            console.log(username);
+            console.log(password);
+            let data = {
+                email: username,
+                password
+            };
+            let url = 'http://localhost:3030/users/login'
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'content-type': 'aplications/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(resp => resp.json())
+            .then(user => {
+                console.log(user);
+            })
+        });
+
+
+    </script>
+</body>
+</html>
