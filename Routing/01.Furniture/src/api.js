@@ -11,14 +11,14 @@ async function request(method,url,data) {
     };
 
     try {
-        const responce = await fetch(host + url, options);
-        let user = localStorage.getItem('user');
+        let user = JSON.parse(localStorage.getItem('user'));
         if (user) {
             const token = user.accessToken;
-            options.headers['X-authorization'] = token;
-
+            options.headers['X-Authorization'] = token;
+            
         };
-
+        
+        const responce = await fetch(host + url, options);
         if (!responce.ok) {
             if (responce.status == '403') {
                 localStorage.removeItem('user');

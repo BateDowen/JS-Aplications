@@ -1,8 +1,10 @@
-import { html,render } from "./lib.js";
+import {  deleteFurniture } from "./data.js";
+import { editPage } from "./edit.js";
+import { html,page,render } from "./lib.js";
 
 const mainDiv = document.querySelector('.container');
 
-const template = (furniture) => html`
+const template = (furniture,isOwner,del,loadEdit) => html`
 <div class="row space-top">
             <div class="col-md-12">
                 <h1>Furniture Details</h1>
@@ -23,15 +25,33 @@ const template = (furniture) => html`
                 <p>Description: <span>${furniture.description}</span></p>
                 <p>Price: <span>${furniture.price}$</span></p>
                 <p>Material: <span>${furniture.material}</span></p>
-                <div>
-                    <a href=”#” class="btn btn-info">Edit</a>
-                    <a href=”#” class="btn btn-red">Delete</a>
-                </div>
+                
+                    ${isOwner ? html`<div>
+                    <a @click="${loadEdit(furniture._id)}"  class="btn btn-info">Edit</a>
+                    <a @click ="${del}" href=”javascript:void(0)” class="btn btn-red">Delete</a>
+                    </div>`: null}
             </div>
         </div>
 `;
-
+export let itemInfo = undefined
 export function detailsPage(furniture) {
-    render(template(furniture), mainDiv);
+    itemInfo = furniture
+    const userID = JSON.parse(localStorage.getItem('user'))._id
+    const isOwner = userID == furniture._ownerId;
+    render(template(furniture,isOwner, del,loadEdit), mainDiv);
     
+    async function del(ev) {
+        ev.preventDefault();
+        const choice = confirm('Are you sure you want to delete this item?');
+        if (choice) {
+            await deleteFurniture(furniture._id);
+            page.redirect('/my-furniture')
+            
+        }
+    };
+};
+function loadEdit(id) {
+     return editPage
 }
+
+

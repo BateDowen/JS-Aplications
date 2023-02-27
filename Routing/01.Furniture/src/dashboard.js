@@ -6,7 +6,7 @@ import { html,render } from "./lib.js";
 
 const mainDiv = document.querySelector('.container');
 
-const template = (resp) => html`
+const template = (resp, onClick) => html`
     
     <div class="row space-top">
         <div class="col-md-12">
@@ -33,8 +33,9 @@ const template = (resp) => html`
 `;
 
 export async function homePage(ctx) {
+    
     const resp = await getAll();
-    render(template(resp), mainDiv);
+    render(template(resp, onClick), mainDiv);
     auth()
 };
 async function onClick(ev){

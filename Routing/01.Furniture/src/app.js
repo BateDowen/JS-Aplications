@@ -9,6 +9,7 @@ import { myFurniturePage } from "./my-furniture.js";
 import { regPage } from "./register.js";
 const mainDiv = document.querySelector('.container')
 
+homePage();
 page(decorate)
 page('/', homePage);
 page('/create', createPage);
@@ -19,7 +20,6 @@ page('/register', regPage);
 page('/edit', editPage);
 
 page.start();
-homePage();
 
 
 function decorate(ctx,next) {
