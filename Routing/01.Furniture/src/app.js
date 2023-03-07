@@ -34,3 +34,4 @@ function onLogout() {
     localStorage.removeItem('user')
     page.redirect('/')
 }
+
