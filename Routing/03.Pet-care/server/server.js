@@ -1334,7 +1334,7 @@
     };
     var seedData = {
         pets: {
-            "ff436770-76c5-40e2-b231-77409eda7a61": {
+            "1": {
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
                 "name": "Max",
                 "breed": "Shiba Inu",
@@ -1343,7 +1343,7 @@
                 "image": "../images/Shiba-Inu.png",
                 "_createdOn": 1617194128618
             },
-            "1840a313-225c-416a-817a-9954d4609f7c": {
+            "21": {
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
                 "name": "Athena",
                 "breed": "American Curl",
@@ -1352,7 +1352,7 @@
                 "image": "../images/cat2.jpg",
                 "_createdOn": 1617194210928
             },
-            "126777f5-3277-42ad-b874-76d043b069cb": {
+            "22": {
                 "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
                 "name": "Apollo",
                 "breed": "Pug",
@@ -1361,9 +1361,189 @@
                 "image": "../images/dog2.jpg",
                 "_createdOn": 1617194295474
             },
-            "136777f5-3277-42ad-b874-76d043b069cb": {
+            "23": {
                 "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
                 "name": "Chibi",
+                "breed": "Teddy guinea pig",
+                "age": "1 years",
+                "weight": "1kg",
+                "image": "../images/guinea-pig.jpg",
+                "_createdOn": 1617194295480
+            },
+            "2": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "name": "Maw",
+                "breed": "Shiba Inu",
+                "age": "2 years",
+                "weight": "5kg",
+                "image": "../images/Shiba-Inu.png",
+                
+            },
+            "3": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "name": "Athen",
+                "breed": "American Curl",
+                "age": "1 year",
+                "weight": "3kg",
+                "image": "../images/cat2.jpg",
+                
+            },
+            "4": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                "name": "Apolloo",
+                "breed": "Pug",
+                "age": "3 years",
+                "weight": "4kg",
+                "image": "../images/dog2.jpg",
+                
+            },
+            "5": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                "name": "Chibii",
+                "breed": "Teddy guinea pig",
+                "age": "1 years",
+                "weight": "1kg",
+                "image": "../images/guinea-pig.jpg",
+                "_createdOn": 1617194295480
+            },
+            "6": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "name": "Maxx",
+                "breed": "Shiba Inu",
+                "age": "2 years",
+                "weight": "5kg",
+                "image": "../images/Shiba-Inu.png",
+                "_createdOn": 1617194128618
+            },
+            "7": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "name": "Athenaa",
+                "breed": "American Curl",
+                "age": "1 year",
+                "weight": "3kg",
+                "image": "../images/cat2.jpg",
+                "_createdOn": 1617194210928
+            },
+            "8": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                "name": "Apolloa",
+                "breed": "Pug",
+                "age": "3 years",
+                "weight": "4kg",
+                "image": "../images/dog2.jpg",
+                "_createdOn": 1617194295474
+            },
+            "9": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                "name": "Chibia",
+                "breed": "Teddy guinea pig",
+                "age": "1 years",
+                "weight": "1kg",
+                "image": "../images/guinea-pig.jpg",
+                "_createdOn": 1617194295480
+            },
+            "10": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "name": "Maxa",
+                "breed": "Shiba Inu",
+                "age": "2 years",
+                "weight": "5kg",
+                "image": "../images/Shiba-Inu.png",
+                "_createdOn": 1617194128618
+            },
+            "11": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "name": "Athenaaa",
+                "breed": "American Curl",
+                "age": "1 year",
+                "weight": "3kg",
+                "image": "../images/cat2.jpg",
+                "_createdOn": 1617194210928
+            },
+            "12": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                "name": "Apolloq",
+                "breed": "Pug",
+                "age": "3 years",
+                "weight": "4kg",
+                "image": "../images/dog2.jpg",
+                "_createdOn": 1617194295474
+            },
+            "13": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                "name": "Chibiq",
+                "breed": "Teddy guinea pig",
+                "age": "1 years",
+                "weight": "1kg",
+                "image": "../images/guinea-pig.jpg",
+                "_createdOn": 1617194295480
+            },
+            "14": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "name": "Maxq",
+                "breed": "Shiba Inu",
+                "age": "2 years",
+                "weight": "5kg",
+                "image": "../images/Shiba-Inu.png",
+                "_createdOn": 1617194128618
+            },
+            "15": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "name": "Athenaq",
+                "breed": "American Curl",
+                "age": "1 year",
+                "weight": "3kg",
+                "image": "../images/cat2.jpg",
+                "_createdOn": 1617194210928
+            },
+            "16": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                "name": "Apolloaw",
+                "breed": "Pug",
+                "age": "3 years",
+                "weight": "4kg",
+                "image": "../images/dog2.jpg",
+                "_createdOn": 1617194295474
+            },
+            "17": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                "name": "Chibiw",
+                "breed": "Teddy guinea pig",
+                "age": "1 years",
+                "weight": "1kg",
+                "image": "../images/guinea-pig.jpg",
+                "_createdOn": 1617194295480
+            },
+            "18": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "name": "Maxw",
+                "breed": "Shiba Inu",
+                "age": "2 years",
+                "weight": "5kg",
+                "image": "../images/Shiba-Inu.png",
+                "_createdOn": 1617194128618
+            },
+            "19": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "name": "Athenaww",
+                "breed": "American Curl",
+                "age": "1 year",
+                "weight": "3kg",
+                "image": "../images/cat2.jpg",
+                "_createdOn": 1617194210928
+            },
+            "20": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                "name": "Apolloe",
+                "breed": "Pug",
+                "age": "3 years",
+                "weight": "4kg",
+                "image": "../images/dog2.jpg",
+                "_createdOn": 1617194295474
+            },
+            "21": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                "name": "Chibit",
                 "breed": "Teddy guinea pig",
                 "age": "1 years",
                 "weight": "1kg",
@@ -1399,8 +1579,8 @@
 
     const server = http__default['default'].createServer(requestHandler(plugins, services));
 
-    const port = 3030;
-    server.listen(port);
+    // const port = 3030;
+    // server.listen(port);
     console.log(`Server started on port ${port}. You can make requests to http://localhost:${port}/`);
     console.log(`Admin panel located at http://localhost:${port}/admin`);
 

@@ -1,17 +1,28 @@
 import * as api from './api.js'
-
+const PAGE_SIZE = 3
 const paths = {
-    'getAll': '/data/pets?sortBy=_createdOn%20desc&distinct=name',
+    'getAll': '/data/pets',
     'byId': '/data/pets/',
     'login': '/users/login',
     'reg': '/users/register',
     'logout': '/users/logout',
     'edit': '/data/pets/',
     'del': '/data/pets/',
-    'create': '/data/pets'
+    'create': '/data/pets',
+    'count': '/data/pets?count'
 }
-export function getAll() {
-    return api.get(paths.getAll)
+export function getCount() {
+    return api.get(paths.count)
+}
+export function getAll(page) {
+    let query = [];
+
+    if (page) {
+        query.push(`offset=${(page - 1) * PAGE_SIZE}`);
+        query.push(`pageSize=${PAGE_SIZE}`)
+    }
+    let querystring = query.length ? `?${query.join('&')}` : ''
+    return api.get(paths.getAll + querystring)
 }
 export function getById(id) {
     return api.get(paths.byId + id)

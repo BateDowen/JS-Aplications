@@ -11,6 +11,7 @@ const template =()=> html`
                 <img src="./images/header-dog.png" alt="dog">
             </article>
         </section>
+      
 `;
 
 export const homeView = (ctx) => {
