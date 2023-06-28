@@ -2,7 +2,6 @@ const Pet = require('../../modules/Pet');
 
 
 exports.getDashboard = (req,res,next) => {
-    const currPage = req.query.page || 1;
     let petsCount;
 
     Pet.find()
@@ -20,6 +19,23 @@ exports.getDashboard = (req,res,next) => {
         catchError(err,next)
     })
 };
+
+exports.getById = (req,res,next) => {
+    const petId = req.params.petId;
+
+    Pet.findById(petId)
+    .then(pet =>{
+        if (!pet) {
+            const err = new Error('Could not find pet');
+            err.ststusCode = 404;
+            throw err;
+        };
+        res.status(200).json(pet)
+    })
+    .catch(err =>{
+        catchError(err,next)
+    })
+}
 
 exports.createPost = (req,res,next) => {
     console.log(req.body);
