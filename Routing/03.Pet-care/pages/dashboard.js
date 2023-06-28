@@ -5,8 +5,10 @@ const dashTemplate = (loadDogs,page,count) =>html`
  <section id="dashboard">
             <h2 class="dashboard-title">Services for every animal</h2>
             <div class="animals-dashboard">
-               ${loadDogs.length > 0 ? 
-                loadDogs.map(x => html`
+                ${console.log(loadDogs.pets)}
+               ${loadDogs.pets.length > 0 ? 
+               
+                loadDogs.pets.map(x => html`
                 <div class="animals-board">
                     <article class="service-img">
                         <img class="animal-image-cover" src="${x.image}">
@@ -33,21 +35,22 @@ const dashTemplate = (loadDogs,page,count) =>html`
                     <li class="page-item"><a class="page-link" href="/dashboard?page=${x}">${x}</a></li>
                     
                     `)}
-                    <li class="page-item"><a class="page-link" href="/dashboard?page=${Math.min(page + 1,count)}">Next</a></li>
+                    <li class="page-item"><a class="page-link" href="/dashboard?page=${Math.min(page + 1,count.query)}">Next</a></li>
                 </ul>
                 </nav>
 `;
 function pageBuilder(page,count) {
     let firstPage = Math.max(page - 1, 1)
-    return [firstPage, firstPage + 1, Math.min(firstPage + 2,count)]
+    return [firstPage, firstPage + 1, Math.max(firstPage + 2,Number(count.query))]
 }
 export async function dashPage (ctx){
     const searchParams = new URLSearchParams(ctx.querystring);
     const page = searchParams.get('page');
-   
-     const resp =  await getAll(Number(page) || 1)
+    
     const count = await getCount()
+     const resp =  await getAll(Number(count) || 1)
+     console.log(resp);
      console.log(count);
     
-    ctx.render(dashTemplate(resp,Number(page),count));
+    ctx.render(dashTemplate(resp,Number(resp.query),count));
 }
