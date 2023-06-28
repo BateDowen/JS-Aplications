@@ -17,11 +17,7 @@ exports.getDashboard = (req,res,next) => {
         res.status(200).json({query: petsCount, pets: pets})
     })
     .catch(err =>{
-        if (!err.statusCode) {
-            err.statusCode = 500;
-
-        };
-        next(err);
+        catchError(err,next)
     })
 };
 
@@ -40,11 +36,15 @@ exports.createPost = (req,res,next) => {
         res.status(201).json({message: 'Pet created!'})
     })
     .catch(err =>{
-        if (!err.statusCode) {
-            err.statusCode = 500;
-
-        };
-        next(err);
+        catchError(err,next)
 
     })
+}
+
+const catchError  =(err,next) =>{
+    if (!err.statusCode) {
+        err.statusCode = 500;
+
+    };
+    next(err);
 }
