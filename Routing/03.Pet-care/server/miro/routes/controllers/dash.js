@@ -57,7 +57,7 @@ exports.createPost = (req,res,next) => {
     })
 }
 
-const catchError  =(err,next) =>{
+exports.catchError  = (err,next) =>{
     if (!err.statusCode) {
         err.statusCode = 500;
 

@@ -38,6 +38,8 @@ export const regView = (ctx) =>{
         let { email,password } = Object.fromEntries(formData);
 
         const resp = await register({email,password});
+        ctx.page.redirect('/login')  
+
         
     }
 }
