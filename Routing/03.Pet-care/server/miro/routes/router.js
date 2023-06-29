@@ -10,5 +10,7 @@ router.post('/data/pets', dashController.createPost);
 
 router.post('/users/register', authController.register);
 
+router.post('/users/login', authController.login);
+
 
 module.exports = router
